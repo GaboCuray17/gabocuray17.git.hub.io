@@ -4,35 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Blog Personal</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Mi Blog Personal</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre mí</a></li>
-                <li><a href="blog.html">Novedades</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li><a href="publicaciones.html">Publicaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="galeria.html">Galería</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section>
-            <h2>Bienvenido a mi Blog Personal</h2>
-            <p>Este es mi espacio personal para compartir experiencias, noticias y reflexiones.</p>
+            <h1>Bienvenidos a Mi Blog Personal</h1>
+            <p>Soy Gabriel, un estudiante universitario que está viviendo una de las etapas más emocionantes de su carrera: las prácticas profesionales. Este espacio será mi ventana para compartir todo lo que voy aprendiendo, los desafíos que enfrento y las experiencias que van moldeando mi camino hacia el futuro. A través de mis publicaciones, espero no solo documentar mi evolución, sino también ofrecer consejos, reflexiones y recursos útiles para quienes estén en una situación similar o interesados en el mundo académico y profesional. ¡Acompáñame en este recorrido!</p>
         </section>
+
         <section>
-            <h2>Últimas publicaciones</h2>
-            <ul>
-                <li><a href="blog.html">Post 1: Mi experiencia con los apagones</a></li>
-                <li><a href="blog.html">Post 2: Viajes y descubrimientos</a></li>
+            <h2>Publicaciones Recientes</h2>
+            <article>
+                <h3>Comienzo Practicum I</h3>
+                <p>Una aventura inolvidable está por iniciar...</p>
+                <a href="publicaciones.html">Leer más</a>
+            </article>
+            <article>
+                <h3>Tips de Productividad</h3>
+                <p>Consejos para organizar mejor tu tiempo...</p>
+                <a href="publicaciones.html">Leer más</a>
+            </article>
+        </section>
+
+        <section>
+            <h2>Contenido</h2>
+            <ul class="galeria">
+                <li><img src="src/images/Logo.png" alt="Paisaje de montaña"></li>
+                <li><img src="src/images/Redes.webp" alt="Escritorio organizado"></li>
+                <li><img src="src/images/Diseño.jpeg" alt="Naturaleza exuberante"></li>
             </ul>
+        </section>        
+
+        <section>
+            <h2>HTML para Principiantes</h2>
+            <video controls>
+                <source src="src/videos/htmlparanuevos.mp4" type="video/mp4">
+                Tu navegador no soporta reproducción de video.
+            </video>
+        </section>
+
+        <section>
+            <h2>Actividades Practicum I</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Actividad</th>
+                        <th>Duración</th>
+                        <th>Observación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Configuración de Tablets e inventario</td>
+                        <td>5 días</td>
+                        <td>48 dispositivos configurados</td>
+                    </tr>
+                    <tr>
+                        <td>Inventario teléfonos</td>
+                        <td>1 día</td>
+                        <td>25 equipos inventariados</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Mi Blog Personal</p>
+        <p>© 2025 Mi Blog Personal. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

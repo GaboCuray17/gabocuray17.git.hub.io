@@ -1,0 +1,303 @@
+/* Importar una sola fuente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  padding-top: 60px; /* Para el header fijo */
+}
+
+/* Encabezado */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007acc;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0;
+  padding: 15px 20px;
+  text-align: center;
+  display: flex;
+}
+
+/* Menú de navegación */
+nav {
+  background-color: #1e21cc; /* Fondo del menú */
+  position: sticky;
+  top: 0; /* Hace que el menú quede fijo al hacer scroll */
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centra el contenido */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 10px;
+  display: inline-block;
+  transition: color 0.3s, border-bottom 0.3s ease-in-out;
+  border-bottom: 2px solid transparent; /* Efecto de subrayado animado */
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* Cambia el color al pasar el ratón */
+  border-bottom: 2px solid #ffcc00; /* Subrayado animado */
+}
+
+/* Responsive: Apila el menú en pantallas pequeñas */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column; /* Cambia a vertical */
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 10px 0; /* Añade espacio entre los elementos */
+  }
+}
+
+
+/* Secciones principales */
+main {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  font-size: 2rem;
+  color: #1e21cc;
+  margin-bottom: 15px;
+}
+
+main p, main ul, main table {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Botones */
+button {
+  background-color: #1e21cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e21cc;
+  transform: scale(1.05);
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las imágenes */
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada imagen de la galería */
+.galeria li {
+  position: relative; /* Necesario para el efecto hover */
+  overflow: hidden;
+  border-radius: 10px; /* Bordes redondeados */
+  height: 300px; /* Establece una altura fija para todas las imágenes */
+}
+
+/* Estilo de las imágenes */
+.galeria img {
+  width: 100%; /* La imagen ocupará todo el ancho de su contenedor */
+  height: 100%; /* La imagen ocupará toda la altura de su contenedor */
+  object-fit: cover; /* Mantiene la proporción de la imagen, pero cubre el contenedor */
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  border-radius: 10px;
+}
+
+/* Efecto hover en las imágenes */
+.galeria li:hover img {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Agrega una sombra sutil */
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .galeria {
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria {
+      grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+  }
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th, table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #1e21cc;
+  color: white;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, form textarea, form button {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #1e21cc;
+  box-shadow: 0 0 5px rgba(21, 24, 241, 0.5);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #1e21cc;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Links */
+a {
+  color: #1e21cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1e21cc;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* Estilos generales para el body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Sección que contiene el título */
+section {
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Estilo para el encabezado h1 */
+h1 {
+  text-align: center; /* Centra solo el texto del título */
+  font-size: 3em; /* Ajusta el tamaño de la fuente */
+  font-weight: bold; /* En negrita */
+  color: #333; /* Color del texto */
+}
+
+/* Estilo para el párrafo debajo del título */
+p {
+  font-size: 1.2em; /* Ajusta el tamaño del párrafo */
+  color: #555; /* Color más suave para el texto */
+  text-align: left; /* Deja el párrafo alineado a la izquierda */
+}
+
+/* Estilo para el video */
+video {
+  width: 80%; /* El video ocupará todo el ancho de su contenedor */
+  max-width: 800px; /* Limita el ancho máximo del video */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Elimina el espacio extra debajo del video */
+  margin-top: 20px; /* Un pequeño margen superior para separar el video del texto */
+  margin-left: 0; /* Asegura que el video se alinee a la izquierda */
+  margin-right: auto; /* Alinea el video a la izquierda */
+}
+
